@@ -1,0 +1,64 @@
+{
+ "serviceName": "China", 
+ "type": "MapServer", 
+ "description": "my map service", 
+ "capabilities": "map,query,data", 
+ "clusterName": "default", 
+ "minInstancesPerNode": 1, 
+ "maxInstancesPerNode": 2, 
+ "maxWaitTime": 60, 
+ "maxStartupTime": 300, 
+ "maxIdleTime": 1800, 
+ "maxUsageTime": 600, 
+ "recycleInterval": 24, 
+ "loadBalancing": "ROUND_ROBIN", 
+ "isolationLevel": "HIGH", 
+ "properties": { 
+   "maxBufferCount": "100", 
+   "virtualCacheDir": "http://agsserver122:6080/arcgis/server/arcgiscache", 
+   "maxImageHeight": "2048", 
+   "maxRecordCount": "1000", 
+   "filePath": "\\\\192.168.100.124\\arcgisserver\\data\\china.msd", 
+   "maxImageWidth": "2048", 
+   "cacheOnDemand": "false", 
+   "virtualOutputDir": "http://agsserver122:6080/arcgis/server/arcgisoutput", 
+   "outputDir": "\\\\192.168.100.124\\arcgisserver\\directories\\arcgisoutput", 
+   "supportedImageReturnTypes": "MIME+URL", 
+   "isCached": "false", 
+   "ignoreCache": "false", 
+   "clientCachingAllowed": "false", 
+   "cacheDir": "\\\\192.168.100.124\\arcgisserver\\directories\\arcgiscache" 
+ }, 
+ "extensions": [ 
+    { 
+    "typeName": "KmlServer", 
+    "enabled": true, 
+    "capabilities": "SingleImage,SeparateImages,Vectors", 
+    "properties": { 
+      "minRefreshPeriod": "30", 
+      "compatibilityMode": "GoogleEarth", 
+      "imageSize": "1024", 
+      "dpi": "96", 
+      "endPointURL": "", 
+      "featureLimit": "1000000", 
+      "useDefaultSnippets": "false" 
+     } 
+   }, 
+   { 
+    "typeName": "WFSServer", 
+    "enabled": true, 
+    "capabilities": "", 
+    "properties": { 
+      "appSchemaURI": "http://grid5:6080/arcgis", 
+      "appSchemaPrefix": "arcgis", 
+      "enableTransactions": "false" 
+      } 
+    }, 
+   { 
+    "typeName": "WCSServer", 
+    "enabled": false, 
+    "capabilities": "", 
+    "properties": {} 
+   } 
+ ] 
+}
