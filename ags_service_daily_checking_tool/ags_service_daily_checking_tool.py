@@ -6,13 +6,13 @@ import getopt
 import time
 
 def main(argv=None):
-    # Ask for admin/publisher user name and password
+    # Ask for the path for ags_pms.config file.
     opts, args = getopt.getopt(argv, "s:a:")
     config_file = ""
     server_config = ""
     if len(opts) == 0:
         print(
-            "Please input service.json path and ags_pms.config path, eg: -a 'c:\\\\Users\\maklmac\\Desktop\\ags_pms.conf' . "
+            "Please input the ags_pms.config path, eg: -a 'c:\\\\Users\\maklmac\\Desktop\\ags_pms.conf' . "
         )
         print("If you don't set , the default value would use the same path with the python script exist. ")
         print('-a : The path of ags_pms.conf(optional)')
