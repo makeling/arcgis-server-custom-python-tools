@@ -34,25 +34,25 @@ The python script developed in Python 3.6.1 |Anaconda custom (64-bit) .
 
 2. execute in a cmd:
 
-   ````
-   $ cd <download path>/arcgis-server-custom-python-tools/ags_service_daily_checking_tool
+  ````
+  $ cd <download path>/arcgis-server-custom-python-tools/ags_service_daily_checking_tool
 
-   $ python ags_service_daily_checking_tool.py
+  $ python ags_service_daily_checking_tool.py
 
-   Please input service.json path and ags_pms.config path, eg: -a 'c:\Users\maklmac\Desktop\ags_pms.conf' .
-   If you don't set , the default value would use the same path with the python script exist.
-   -a : The path of ags_pms.conf(optional)
-   let's start!
-   server_config .../arcgis-server-custom-python-tools/ags_service_daily_checking_tool/ags_pms.conf
-   {'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
-   {'repair_times': 3}
-   export_file: .../arcgis-server-custom-python-tools/ags_service_daily_checking_tool/check_results/check_result_20180312171345.txt
-   http://192.168.100.124:6080/arcgis/admin/generateToken
-   All the folders: ['/', 'f10', 'f20', 'ftt']
-   services_count: 115
-   start checking service status....
-   ......
-   ````
+  Please input service.json path and ags_pms.config path, eg: -a 'c:\Users\maklmac\Desktop\ags_pms.conf' .
+  If you don't set , the default value would use the same path with the python script exist.
+  -a : The path of ags_pms.conf(optional)
+  let's start!
+  server_config .../arcgis-server-custom-python-tools/ags_service_daily_checking_tool/ags_pms.conf
+  {'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+  {'repair_times': 3}
+  export_file: .../arcgis-server-custom-python-tools/ags_service_daily_checking_tool/check_results/check_result_20180312171345.txt
+  http://192.168.100.124:6080/arcgis/admin/generateToken
+  All the folders: ['/', 'f10', 'f20', 'ftt']
+  services_count: 115
+  start checking service status....
+  ......
+  ````
 
 If you see the export informations like this, congratulations!
 
