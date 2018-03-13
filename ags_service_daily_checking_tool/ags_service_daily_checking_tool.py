@@ -92,7 +92,7 @@ def create_result_file(current_path):
 def get_services_list(export_file,url,token):
     try:
         file = open(export_file, 'a+')
-        file.write("正在获取图层列表..."  + "\n")
+        file.write("正在获取服务列表..."  + "\n")
 
         request_url = url + "/admin/services"
         folders = ['/']

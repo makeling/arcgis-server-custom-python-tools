@@ -1,0 +1,48 @@
+
+update time：2018-03-13 17:18:58
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_update_map_service_properties_tool/check_results/result_20180313171858.txt
+
+-------------------------initializing parameters-------------------------
+
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_update_map_service_properties_tool/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'services_list': ['china0', 'china1', 'china2'], 'properties': {'minInstancesPerNode': 0, 'maxInstancesPerNode': 1}, 'folder': '', 'service_name_prefix': ''}
+
+-------------------------generating token-------------------------
+
+tokenIka5D-RIdgTjjAEgaxEop4uvqH54to5ptLAX1dkpsVE9xHc8kwaqYCuCCjO3Eoan
+
+-------------------------getting full service list-------------------------
+
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:119
+
+service url:http://192.168.100.124:6080/arcgis/admin/services/china0.MapServer
+
+-------------------------updating service: china0-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.047782s
+service url:http://192.168.100.124:6080/arcgis/admin/services/china1.MapServer
+
+-------------------------updating service: china1-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 1.0090700000000001s
+service url:http://192.168.100.124:6080/arcgis/admin/services/china2.MapServer
+
+-------------------------updating service: china2-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.770576s
+
+-------------------------update finished!-------------------------
+

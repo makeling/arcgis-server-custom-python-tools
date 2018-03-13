@@ -2,7 +2,7 @@
 
 This tool can be used to batch publish arcgis server map services for test.
 
-## Requirement environment:
+## Requirement:
 
 1. The python script developed in Python 3.6.1 |Anaconda custom (64-bit) .
 
@@ -60,7 +60,7 @@ Base on the sample settings, the services name list would be: china0.mapserver, 
 3. execute in a cmd:
 
   ````
-  $ cd <download path>/arcgis-server-custom-python-tools/ags_service_daily_checking_tool
+  $ cd <download path>/arcgis-server-custom-python-tools/batch_publish_map_service_tool
 
   $ python batch_publish_map_service_tool.py
 

@@ -9,7 +9,7 @@ Fundamentally, this tool include two functions:
 1. checking arcgis server service start status in a cluster multimachine deployment.
 2. checking the instance numbers ensure every machine have created instance process follow the minimum settings in the service config.
 
-## Requirement environment:
+## Requirement:
 
 The python script developed in Python 3.6.1 |Anaconda custom (64-bit) .
 
@@ -56,7 +56,7 @@ The python script developed in Python 3.6.1 |Anaconda custom (64-bit) .
 
 If you see the export informations like this, congratulations!
 
-The checking result also be saved on the folder of <the_same_path_with_tool>\check_results\ , you could use them at any time.
+The checking result also be saved in the folder of <the_same_path_with_tool>\check_results\ , you could use them at any time.
 
 
 
