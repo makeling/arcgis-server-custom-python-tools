@@ -9,7 +9,7 @@ import os
 import getopt
 
 def main(argv=None):
-    # Ask for admin/publisher user name and password
+    # # Ask for the path for ags_pms.config and server.json files.
     opts, args = getopt.getopt(argv, "s:a:")
     config_file = ""
     server_config = ""
@@ -78,7 +78,7 @@ def main(argv=None):
 
     publish_map_services(url,token,config_file,folder,service_name_prefix,start_num,service_count)
 
-
+# create a new folder for arcgis server
 def create_new_folder(url,token,folder):
     try:
         create_folder_url =  url + "/admin/services/createFolder"
@@ -106,6 +106,7 @@ def publish_map_services(url,token,config_file,folder,service_name_prefix,start_
     try:
         for i in range(service_count):
             service_name = service_name_prefix + str(start_num+i)
+            # print("service_name:", service_name)
             service_params = set_params(config_file,"serviceName",service_name)
             # print(service_params)
             # params = {'token': token, 'f': 'json','service': service_params}
@@ -127,6 +128,7 @@ def publish_map_services(url,token,config_file,folder,service_name_prefix,start_
         print("publishing service failed!")
         return
 
+# get config params from ags_pms.conf file
 def get_publish_params(config_file):
     try:
         file = open(config_file)
@@ -136,12 +138,11 @@ def get_publish_params(config_file):
         file.close()
         return settings
     except:
-        print("open service.json file failed, please check the path.")
+        print("open ags_pms.conf file failed, please check the path.")
         return
 
 
-
-# get config params from json
+# get connection params from ags_pms.conf file
 def get_server_conns_params(config_file):
     try:
         file = open(config_file)
@@ -155,12 +156,11 @@ def get_server_conns_params(config_file):
         print("open service.json file failed, please check the path.")
         return
 
-# load config file and return params dictionary
+# load services config file and reset service name params dictionary
 def set_params(config_file,key,value):
     try:
         file = open(config_file)
         params = json.load(file)
-        # print(params)
         for k in params.keys():
             if k == key:
                 # print(key)
