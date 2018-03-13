@@ -56,7 +56,7 @@ The python script developed in Python 3.6.1 |Anaconda custom (64-bit) .
 
 If you see the export informations like this, congratulations!
 
-The checking result also be saved in the folder of <the_same_path_with_tool>\check_results\ , you could use them at any time.
+The checking result log also be saved in the folder of <the_same_path_with_tool>\check_results\ , you could use them at any time.
 
 
 
