@@ -9,134 +9,58 @@ import random
 
 # Defines the entry point into the script
 def main(argv=None):
-    # Ask for admin/publisher user name and password
-    opts, args = getopt.getopt(argv,"u:p:a:i:t:l:")
-    username = ""
-    password = ""
-    url = ""
-    interval = 1
-    times = 1
-    loop = False
-    if len(opts) == 0:
-        print("please input parameters eg: -u siteadmin -p Super123 -a https://office.esrichina.com:6443/arcgis -i 3 -t 10 -l False")
-        print('-u : The username of arcgis server site administrator')
-        print('-p : The password of arcgis server site administrator')
-        print('-a : The url of testing arcgis server site')
-        print('-i : The interval of requests, unit - (s)')
-        print('-t: The request times')
-        print('-l: Whether loop all the subfolders in the arcgis server site, the default value is False!')
-        print('Good Luck!')
-        return
-
-    for op, value in opts:
-        print("op:",op,"value: ",value)
-        if op == "-u":
-            username = value
-        elif op == "-p":
-            password = value
-        elif op == "-a":
-            url = value
-        elif op == "-i":
-            interval = int(value)
-        elif op == "-t":
-            times = int(value)
-        elif op == "-l":
-            loop = value
-
-
+    print("let's start!")
+    print(printSplitLine('creating export result file'))
     current_path = os.getcwd()
-    # current_path = '/Users/maklmac/Desktop'
-    # i
-    time_stamp = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-    file_path = current_path + os.path.sep + "test_" + str(time_stamp) + '.txt'
-    print(file_path)
-    file = open(file_path, 'w')
-    try:
-        #1 print user input parameters
-        file.write(printSplitLine('input parameters: '))
-        file.write('\n')
-        print(printSplitLine('input parameters: '))
-        print('username: ', username, 'password: ', password, 'url: ', url, 'interval: ', interval, 'times: ', times,
-              'loop:  ', loop)
-        file.write('username: ' + username +
-                   ', password: ' + password + ', url:' + url + ', interval:' + str(interval) + ', times:' + str(
-                       times) + ', loop:' + str(loop) + '\n')
-        file.write('\n')
+    export_file = create_result_file(current_path)
+    file = open(export_file, 'a+')
 
-        # username = "siteadmin"
-        # password = "Super123"
-        # server_url = r"https://office.esrichina.com:6443/arcgis"
-        #2 get token
-        print(printSplitLine("getting token..."))
-        file.write('\n')
-        file.write(printSplitLine("getting token..."))
-        # get token
-        token = generateToken(url, username, password)
-        print("token:", token)
-        file.write("token:"+ token + '\n')
-        file.write('\n')
+    file_write_format(file, "export_file: " + str(export_file))
 
-        # 3 get services list
-        file.write(printSplitLine("getting service list..."))
-        file.write('\n')
-        print(printSplitLine("getting service list..."))
+    file_write_format(file, printSplitLine('initializing parameters'))
 
-        service_list = []
+    server_config = current_path + os.sep + 'ags_pms.conf'
 
-        count, result = getServiceList(url, token, loop)
+    file_write_format(file, "ags_pms.conf: " + str(server_config))
+    file.write("\n")
+    print("")
 
-        if result != "failed":
-            service_list = result
+    conns = get_server_conns_params(server_config)
 
-        print("services count:", count)
+    file_write_format(file, "conns:" + str(conns))
 
-        file.write("services count:" + str(count) + '\n')
-        i = 1
-        for service in service_list:
-            print("service%s:" % i, service)
-            file.write("service")
-            file.write(str(i))
-            file.write(": ")
-            file.write(str(service))
-            file.write('\n')
-            i += 1
-
-        file.write('\n')
-
-        # 4 start testing
-        file.write(printSplitLine("start testing..."))
-        file.write('\n')
-        print(printSplitLine("start testing..."))
-        # begin test for request by interval and times
-        response = request_services(url, token, count, service_list, interval, times)
-
-        file.write(str(response[2]) + '\n')
-
-        #5 print response time
-        file.write(printSplitLine("computing response time..."))
-        file.write('\n')
-
-        print(printSplitLine("computing response time..."))
-
-        file.write('All the requests consumed: '+str("%.4f" % response[0]) + 's'+'\n')
-
-        print('All the requests consumed:'+str("%.4f" % response[0])+ 's' + '\n')
-
-        file.write('Average response time: ' + str("%.4f" % response[1]) + 's' + '\n')
-
-        print('Average response time:' + str("%.4f" % response[1])+ 's' + '\n')
-        file.write('\n')
-
-        # 6 the end
-        file.write(printSplitLine("successfully complete all the test!") + '\n')
-
-        print(printSplitLine("successfully complete all the test!"))
-
-        file.close()
-
-    except:
-        file.close()
+    if conns != None:
+        url = conns['url']
+        username = conns['username']
+        password = conns['password']
+    else:
         return
+
+    settings = get_config_params(server_config)
+
+    file_write_format(file, "settins:" + str(settings))
+
+    if settings != None:
+        interval = settings['interval']
+        times = settings['request_times']
+        loop = settings['loop']
+
+    else:
+        return
+
+    file_write_format(file, printSplitLine('generating token'))
+
+    token = generate_token(url, username, password)
+
+    file_write_format(file, "token" + token)
+
+    file.close()
+
+    service_count, full_services_list = get_services_list(export_file, url, token)
+
+    # begin test for request by interval and times
+    request_services(export_file, url, token, service_count, full_services_list, interval, times)
+
 
 # print a dash line for format the different part.
 def printSplitLine(comment):
@@ -152,52 +76,67 @@ def printSplitLine(comment):
     return (splitline + "\n")
 
 #resquest servcies
-def request_services(url,token,count,serviceList,interval, times):
+def request_services(export_file,url,token,count,service_list,interval, times):
+    file = open(export_file,'a+')
+    file_write_format(file, printSplitLine("start testing"))
     response_str = ""
     total_time = 0.0
     mean_time = 0.0
     request_num = 0
-    for i in range(times):
-        s = random.randint(0, count-1)
-        service = serviceList[s]
-        print("selected service:" , service)
-        # file.write("selected service:" + str(service) + '\n')
-        response_str += "selected service:" + str(service) + '\n'
-        service_url = url
+    try:
+        for i in range(times):
+            s = random.randint(0, count - 1)
+            service = service_list[s]
+            file_write_format(file, "selected service:" + str(service))
 
-        service_url += "/rest/services" + "/" + service['name'] + "/" + service['type']
+            if service['folderName'] == '/':
+                service_url = url + "/rest/services/" + service['serviceName'] + "/" + service['type']
+            else:
+                service_url = url + "/rest/services/" + service['folderName'] + "/" +  service['serviceName'] + "/" + service['type']
 
-        if service['type'] == 'MapServer':
-            service_url += '/export'
-            bbox = get_initialExtents(service_url,token)
-            # print(bbox)
-            if bbox == 'failed':
-                continue
+            if service['type'] == 'MapServer':
+                service_url += '/export'
+                bbox = get_initialExtents(service_url,token)
+                # print(bbox)
+                if bbox == 'failed':
+                    continue
+
+                else:
+                    random_bbox = generate_random_bbox(bbox)
+
+                    file_write_format(file, 'param_bbox:' + str(random_bbox))
+                    params = get_export_map_parameters(token, random_bbox)
+                    response = submit_request(service_url, params)
+                    elapse = str_conv_float(response[0])
+                    total_time += elapse
+                    request_num += 1
+
+                    file_write_format(file, 'response duration: ' + str(response[0]) + ' \n' + 'response content: '+str(response[1]))
 
             else:
-                random_bbox = generate_random_bbox(bbox)
-                response_str += 'param_bbox:' + str(random_bbox) + '\n'
-                params = get_export_map_parameters(token, random_bbox)
-                response = submit_request(service_url, params)
-                elapse = str_conv_float(response[0])
-                total_time += elapse
-                request_num += 1
-                response_str += 'response duration: ' + str(response[0]) + ' \n' + 'response content: '+str(response[1]) + '\n'
-                print('response duration: ' + str(response[0]) + ' \n' + 'response content: '+str(response[1]))
-        else:
-            print("skip %s now!"%service['type'])
-            response_str += 'skip ' + str(service['type']) + 'now!' + '\n'
+                file_write_format(file, "skip %s now!"%service['type'])
 
-        print("service url: ",service_url,'\n')
-        response_str += 'service url: ' + str(service_url) + '\n' + '\n'
-        time.sleep(interval)
+                file_write_format(file, 'service url: ' + str(service_url) + '\n')
+                time.sleep(interval)
 
-    if int(request_num) == 0:
-        mean_time = total_time
-    else:
-        mean_time = total_time / request_num
+            if int(request_num) == 0:
+                mean_time = total_time
+            else:
+                mean_time = total_time / request_num
+            file_write_format(file,'\n')
 
-    return total_time,mean_time,response_str
+        file_write_format(file, printSplitLine("successfully complete all the test!"))
+
+        file_write_format(file, 'Total test services: ' + str(times))
+
+        file_write_format(file, 'All the requests consumed: ' + str("%.4f" % total_time) + 's')
+
+        file_write_format(file, 'Average response time: ' + str("%.4f" % mean_time) + 's')
+
+    except:
+        file_write_format(file,"test failed!")
+
+        file.close()
 
 #assistant method for convert duration from string to float
 def str_conv_float(elaple):
@@ -247,6 +186,39 @@ def get_export_map_parameters(token,bbox):
     params = {'token': token, 'f': 'json','format':'png','transparent':False,'bbox':bbox}
 
     return params
+
+#format the export informations
+def file_write_format(file,input_str):
+    print(input_str)
+    file.write(input_str + "\n")
+
+# method for get the connection parameters from a json file
+def get_server_conns_params(config_file):
+    try:
+        file = open(config_file)
+        params = json.load(file)
+        # print(params)
+        conns = params['conns']
+        # print(conns)
+        file.close()
+        return conns
+    except:
+        print("open ags_pms.conf file failed, please check the path.")
+        return
+
+# method for get the config parameters from a json file
+def get_config_params(config_file):
+    try:
+        file = open(config_file)
+        params = json.load(file)
+        # print(params)
+        settings = params['settings']
+        # print(settings)
+        file.close()
+        return settings
+    except:
+        print("open ags_pms.conf file failed, please check the path.")
+        return
 
 #assistant method for submit request
 def submit_request(url,params,item=""):
@@ -299,15 +271,17 @@ def get_initialExtents(url,token):
 
     return result[1]
 
-# get foldeer and services list in folder
-def getServiceList(url,token,loop_sub_folder="False"):
-    url += '/rest/services'
-    folders = ['/']
-    params = {'token': token, 'f': 'json'}
+# get folder list and services list in every folder.
+def get_services_list(export_file, url, token):
+    try:
+        file = open(export_file, 'a+')
 
-    if str.upper(loop_sub_folder)== "TRUE":
+        request_url = url + "/admin/services"
+        folders = ['/']
+        params = {'token': token, 'f': 'json'}
         item = 'folders'
-        result = submit_request(url, params, item)
+        result = submit_request(request_url, params, item)
+
         if result != "failed":
             for f in result[1]:
                 if str.upper(f) == "SYSTEM" or str.upper(f) == "UTILITIES" or str.upper(f) == "HOSTED":
@@ -315,26 +289,34 @@ def getServiceList(url,token,loop_sub_folder="False"):
                 else:
                     folders.append(f)
 
-    print("All the folders:",folders)
+        file_write_format(file, "All the folders:" + str(folders))
 
+        services_list = []
+        if folders != None:
+            for folder in folders:
+                if folder == '/':
+                    folder_url = request_url
+                else:
+                    folder_url = request_url + "/" + folder
+                item = 'services'
+                services = submit_request(folder_url, params, item)
+                for i in services[1]:
+                    # file_write_format(export_file, str(i))
+                    services_list.append(i)
+        count = len(services_list)
 
-    services_list = []
-    if folders != None:
-        for folder in folders:
-            if folder == '/':
-                folder_url = url
-            else:
-                folder_url = url + "/" + folder
-            item = 'services'
-            services = submit_request(folder_url, params,item)
-            for i in services[1]:
-                services_list.append(i)
-    count = len(services_list)
+        file_write_format(file, "services_count:" + str(count))
+        file.write("\n")
 
-    return count,services_list
+        file.close()
+        return count, services_list
+    except:
+        file_write_format(file, "get services list failed!")
+        file.close()
+        return
 
 # get token by arcgis server
-def generateToken(url, username, password):
+def generate_token(url, username, password):
     tokenUrl = url + '/admin/generateToken'
     print(tokenUrl)
     # , 'ip':'192.168.100.85'
@@ -346,6 +328,32 @@ def generateToken(url, username, password):
 
     return r[1]
 
+
+# create a new dir in the current path for store the check result file.
+def create_result_file(current_path):
+    try:
+        export_result_folder = current_path + os.sep + "check_results"
+        if os.path.exists(export_result_folder) == False:
+            os.mkdir(export_result_folder)
+        timeStamp = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+
+        export_file = export_result_folder + os.sep + "result_" + timeStamp + ".txt"
+
+        file = open(export_file, 'w')
+
+        time_log = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+
+        file.write("\n")
+        file_write_format(file, "update time：" + time_log)
+        file.write("\n")
+
+        file.close()
+        # export_result_name = service_status
+
+        return export_file
+    except:
+        print("create the check_results folder or result file failed!")
+        return
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

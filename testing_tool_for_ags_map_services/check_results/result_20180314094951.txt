@@ -1,0 +1,9 @@
+
+update time：2018-03-14 09:49:51
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/check_results/result_20180314094951.txt
+-------------------------initializing parameters-------------------------
+
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/ags_pms.conf
+
+conns:None

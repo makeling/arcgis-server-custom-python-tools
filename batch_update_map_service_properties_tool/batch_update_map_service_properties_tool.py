@@ -272,6 +272,7 @@ def generate_token(url, username, password):
         print("get token failed, please check url, username, password.")
         return
 
+#format the export informations
 def file_write_format(file,input_str):
     print(input_str)
     file.write(input_str + "\n")

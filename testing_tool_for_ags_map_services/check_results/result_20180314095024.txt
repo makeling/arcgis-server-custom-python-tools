@@ -1,0 +1,15 @@
+
+update time：2018-03-14 09:50:24
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/check_results/result_20180314095024.txt
+-------------------------initializing parameters-------------------------
+
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'interval': 1, 'request_times': 1, 'loop': True}
+-------------------------generating token-------------------------
+
+tokenM5XT9RgkoJUXJWfRYq2c6xvRfAdBktgxWyGjfyHfwu_1uX_ccJ0A8YXVkyYo9gFE
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+get services list failed!

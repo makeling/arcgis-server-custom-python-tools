@@ -1,0 +1,98 @@
+
+update time：2018-03-14 11:48:30
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/check_results/result_20180314114830.txt
+-------------------------initializing parameters-------------------------
+
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'interval': 1, 'request_times': 10, 'loop': True}
+-------------------------generating token-------------------------
+
+token1m7dvpODf7VMfVcTm7zVv9qhqAwVGZDwnY-Bt5jaVkUhBG5VEL3EQckmu5dGYT8G
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:119
+
+-------------------------start testing-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china47', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:13139153.46779614,5154991.333168775,13740934.198424753,6575155.701731605
+response duration: 0.406374s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china47_MapServer/_ags_map1de023f9ebdc401c8e9c26db08945cca.png', 'width': 400, 'height': 400, 'extent': {'xmin': 12729961.648829028, 'ymin': 5154991.333168774, 'xmax': 14150126.017391859, 'ymax': 6575155.7017316045, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 13418849.085676473}
+All the requests consumed: 0.4064s
+Average response time: 0.4064s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'SampleWorldCities', 'type': 'MapServer', 'description': 'SampleWorldCities 服务用于快速轻松地预览 GIS 服务器的功能。单击缩略图图像可以在 web 应用程序中打开它。此实例服务为可选服务，因此可以删除。'}
+param_bbox:-40.05972137624423,-16.001932282569392,-12.725820639713959,47.35217824634775
+response duration: 0.604684s 
+response content: {'href': 'http://192.168.100.124:6080/arcgis/rest/directories/arcgisoutput/SampleWorldCities_MapServer/_ags_mapdadc10c893ba4bac9d2cc2f2e1e9294d.png', 'width': 400, 'height': 400, 'extent': {'xmin': -58.06982627243766, 'ymin': -16.001932282569392, 'xmax': 5.284284256479481, 'ymax': 47.35217824634775, 'spatialReference': {'wkid': 4326, 'latestWkid': 4326}}, 'scale': 66563509.943726316}
+All the requests consumed: 1.0111s
+Average response time: 0.5055s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china36', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:12049239.838681996,5432528.291993461,14370755.04770413,6667019.481548152
+response duration: 0.414697s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china36_MapServer/_ags_mapfca3b945ab754c7e98c3da563a8bd7aa.png', 'width': 400, 'height': 400, 'extent': {'xmin': 12049239.838681996, 'ymin': 4889016.28225974, 'xmax': 14370755.04770413, 'ymax': 7210531.491281875, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 21935532.907008342}
+All the requests consumed: 1.4258s
+Average response time: 0.4753s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china82', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:8385806.710732014,4141999.3662742805,11458758.4529779,6116727.722240016
+response duration: 0.449365s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china82_MapServer/_ags_mapdb44a572a693497c9c401bf5babb1ea9.png', 'width': 400, 'height': 400, 'extent': {'xmin': 8385806.710732013, 'ymin': 3592887.673134207, 'xmax': 11458758.4529779, 'ymax': 6665839.415380092, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 29035706.422132928}
+All the requests consumed: 1.8751s
+Average response time: 0.4688s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china59', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:10219751.65153994,4128527.018197327,12214572.811028272,4650857.462931718
+response duration: 0.420506s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china59_MapServer/_ags_mapc882477990a140aca02a1f5d5073fede.png', 'width': 400, 'height': 400, 'extent': {'xmin': 10219751.65153994, 'ymin': 3392281.6608203547, 'xmax': 12214572.811028272, 'ymax': 5387102.820308686, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 18848666.171773344}
+All the requests consumed: 2.2956s
+Average response time: 0.4591s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': 'f20', 'serviceName': 'cc0', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:13920796.42174349,4985559.63276781,14370513.87241909,6732942.285196385
+response duration: 0.986159s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/f20/cc0_MapServer/_ags_map367ad69271af43e0af7403ac5c24a236.png', 'width': 400, 'height': 400, 'extent': {'xmin': 13271963.820867002, 'ymin': 4985559.63276781, 'xmax': 15019346.473295579, 'ymax': 6732942.285196385, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 16510669.206267133}
+All the requests consumed: 3.2818s
+Average response time: 0.5470s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china11', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:9910827.791480137,4322064.232018192,12400447.183354829,4337634.136398376
+response duration: 0.44986200000000004s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china11_MapServer/_ags_mapdfeaf4288a3a4214ba90fb184f2f685b.png', 'width': 400, 'height': 400, 'extent': {'xmin': 9910827.791480137, 'ymin': 3085039.4882709384, 'xmax': 12400447.183354829, 'ymax': 5574658.88014563, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 23523915.70994558}
+All the requests consumed: 3.7316s
+Average response time: 0.5331s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': 'f10', 'serviceName': 'cc1', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:10321846.124356534,6255344.224649789,14232827.669313371,6534451.879393422
+response duration: 0.898482s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/f10/cc1_MapServer/_ags_map6f0cf4cc1768424d98b77dd2940afc60.png', 'width': 400, 'height': 400, 'extent': {'xmin': 10321846.124356532, 'ymin': 4439407.2795431875, 'xmax': 14232827.66931337, 'ymax': 8350388.824500024, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 36954082.42198815}
+All the requests consumed: 4.6301s
+Average response time: 0.5788s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china87', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:10685953.852694504,4568149.742785232,14275772.526690915,6621975.372625811
+response duration: 0.469798s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china87_MapServer/_ags_mapee39ed254687401db07d5f57e93b3d33.png', 'width': 400, 'height': 400, 'extent': {'xmin': 10685953.8526945, 'ymin': 3800153.220707315, 'xmax': 14275772.526690912, 'ymax': 7389971.894703726, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 33919478.68685729}
+All the requests consumed: 5.0999s
+Average response time: 0.5667s
+-------------------------successfully complete all the test!-------------------------
+
+selected service:{'folderName': '/', 'serviceName': 'china45', 'type': 'MapServer', 'description': 'my map service'}
+param_bbox:11557523.335280158,3947720.8173691146,14260629.67237335,4055545.983599574
+response duration: 0.619537s 
+response content: {'href': 'http://agsserver122:6080/arcgis/server/arcgisoutput/china45_MapServer/_ags_mapb2b583396ed84fa4b58a9d6c134689ff.png', 'width': 400, 'height': 400, 'extent': {'xmin': 11557523.335280154, 'ymin': 2650080.2319377465, 'xmax': 14260629.672373347, 'ymax': 5353186.56903094, 'spatialReference': {'wkid': 102100, 'latestWkid': 3857}}, 'scale': 25541111.15792616}
+All the requests consumed: 5.7195s
+Average response time: 0.5719s
+-------------------------successfully complete all the test!-------------------------
+

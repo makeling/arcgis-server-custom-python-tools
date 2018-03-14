@@ -1,0 +1,20 @@
+
+update time：2018-03-14 11:45:52
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/check_results/result_20180314114552.txt
+-------------------------initializing parameters-------------------------
+
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/testing_tool_for_ags_map_services/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'interval': 1, 'request_times': 10, 'loop': True}
+-------------------------generating token-------------------------
+
+token1m7dvpODf7VMfVcTm7zVv83B1AFMsQN_oH-l5yLxhh8Wx1zeHXFZn8RIQXI3kr0P
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:119
+
+-------------------------start testing-------------------------
+
+selected service:{'folderName': 'f10', 'serviceName': 'cc1', 'type': 'MapServer', 'description': 'my map service'}
+test failed!
