@@ -192,6 +192,7 @@ def file_write_format(file,input_str):
     print(input_str)
     file.write(input_str + "\n")
 
+
 # method for get the connection parameters from a json file
 def get_server_conns_params(config_file):
     try:

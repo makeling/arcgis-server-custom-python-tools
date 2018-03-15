@@ -111,9 +111,6 @@ def update_service_properties_by_folder(export_file, url, token,service,update_p
         file.close()
         return
 
-
-
-
 # update service properties
 def update_service_properties(url,token,folder,serviceName,properties):
     if folder != "/":
@@ -276,6 +273,7 @@ def generate_token(url, username, password):
 def file_write_format(file,input_str):
     print(input_str)
     file.write(input_str + "\n")
+
 
 # assistant method for submit request
 def submit_request(url, params, item=""):

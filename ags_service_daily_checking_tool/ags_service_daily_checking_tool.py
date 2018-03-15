@@ -1,3 +1,7 @@
+#-*- coding: UTF-8 -*-
+#!/usr/bin/python
+#__author__ = 'keling ma'
+
 import sys
 import json
 import requests
