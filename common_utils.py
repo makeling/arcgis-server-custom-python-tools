@@ -5,12 +5,15 @@
 import requests
 import os,json,sys
 import time
+import collections
 
 
 # get folder list and services list in every folder.
 def get_services_list(export_file, url, token):
     try:
         file = open(export_file, 'a+')
+
+        file_write_format(file, printSplitLine('getting full service list'))
 
         request_url = url + "/admin/services"
         folders = ['/']
@@ -44,13 +47,11 @@ def get_services_list(export_file, url, token):
         file.write("\n")
 
         file.close()
-        return count, services_list
+        return count, services_list,folders
     except:
         file_write_format(file, "get services list failed!")
         file.close()
         return
-
-
 
 # method for get the connection parameters from a json file
 def get_server_conns_params(config_file):
@@ -92,9 +93,26 @@ def printSplitLine(comment):
 
     return "\n" + splitline + "\n"
 
-# generate token by arcgis server
-def generate_token(url, username, password):
+
+#format the export informations
+def file_write_format(file,input_str):
+    print(input_str)
+
     try:
+        if isinstance(getattr(file, "read"), collections.Callable) \
+                and isinstance(getattr(file, "close"), collections.Callable):
+            file.write(input_str + "\n")
+    except AttributeError:
+        pass
+
+
+# generate token by arcgis server
+def generate_token(export_file,url, username, password):
+    try:
+        file = open(export_file, 'a+')
+
+        file_write_format(file, printSplitLine('generating token'))
+
         tokenUrl = url + '/admin/generateToken'
         print("token url:", tokenUrl)
         # , 'ip':'192.168.100.85'
@@ -104,12 +122,15 @@ def generate_token(url, username, password):
 
         r = submit_request(tokenUrl, params, item)
 
+        file_write_format(file, "token" + r[1])
+
+        file.close()
+
         return r[1]
     except:
         print("get token failed, please check url, username, password.")
+        file.close()
         return
-
-
 
 # assistant method for submit request
 def submit_request(url, params, item=""):
@@ -137,7 +158,8 @@ def submit_request(url, params, item=""):
             return elapse_time, last_result
     except:
         print("request failed")
-        return err_flag
+        return elapse_time,err_flag
+
 
 # assert response json
 def assertJsonSuccess(data):
@@ -148,4 +170,45 @@ def assertJsonSuccess(data):
     else:
         return True
 
+
+def generate_export_file():
+
+    print(printSplitLine('creating export result file'))
+    current_path = os.getcwd()
+    export_file = create_result_file(current_path)
+    print(export_file)
+    file = open(export_file, 'a+')
+
+    file_write_format(file, "export_file: " + str(export_file))
+
+    file.close()
+
+
+    return export_file
+
+# create a new dir in the current path for store the check result file.
+def create_result_file(current_path):
+    try:
+        export_result_folder = current_path + os.sep + "check_results"
+        if os.path.exists(export_result_folder) == False:
+            os.mkdir(export_result_folder)
+        timeStamp = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+
+        export_file = export_result_folder + os.sep + "result_" + timeStamp + ".txt"
+
+        file = open(export_file, 'w')
+
+        time_log = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+
+        file.write("\n")
+        file_write_format(file, "update time：" + time_log)
+        file.write("\n")
+
+        file.close()
+        # export_result_name = service_status
+
+        return export_file
+    except:
+        print("create the check_results folder or result file failed!")
+        return
 

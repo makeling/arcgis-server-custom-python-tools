@@ -1,0 +1,76 @@
+
+update time：2018-03-16 17:11:12
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/ags_service_daily_checking_tool/check_results/result_20180316171112.txt
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/ags_service_daily_checking_tool/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'repair_times': 3}
+
+-------------------------generating token-------------------------
+
+tokensURnJg4J09LPWCOB-P69gZoS92B531D-ckAGdHmX1yxvHxMb0HQESkTWr0AY37zY
+
+-------------------------getting full service list-------------------------
+
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:10
+
+
+-------------------------start checking service status-------------------------
+
+checking service :http://192.168.100.124:6080/arcgis/admin/services/f10/china0.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/f10/china1.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/f10/china2.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/f10/china3.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/f10/china4.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq0.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq1.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq2.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq3.MapServer
+check result : normal
+checking service :http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq4.MapServer
+check result : normal
+check and repair service start status finished!
+
+-------------------------start checking instance statistics-------------------------
+
+checking service: http://192.168.100.124:6080/arcgis/admin/services/f10/china0.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/f10/china1.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/f10/china2.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/f10/china3.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/f10/china4.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq0.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq1.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq2.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+checking service: http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq3.MapServer
+checking service: http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq4.MapServer
+check AGSSERVER122 result : normal
+check AGSSERVER1222 result : normal
+
+-------------------------check finished!-------------------------
+

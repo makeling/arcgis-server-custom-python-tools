@@ -1,0 +1,84 @@
+
+update time：2018-03-16 15:43:07
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_delete_service_tool/check_results/result_20180316154307.txt
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_delete_service_tool/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'services_list': [], 'folder': 'ftt', 'service_name_prefix': ''}
+
+-------------------------generating token-------------------------
+
+tokensURnJg4J09LPWCOB-P69gYivo33q7Yk6TW1Qjd6AP22NEGDB1t403AqjVEU8fi49
+
+-------------------------getting full service list-------------------------
+
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:15
+
+
+-------------------------start delete service-------------------------
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftp0.MapServer/delete
+response time: 0.716661s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftp1.MapServer/delete
+response time: 0.135822s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftp2.MapServer/delete
+response time: 0.133552s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftp3.MapServer/delete
+response time: 0.078597s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftp4.MapServer/delete
+response time: 0.053962s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq0.MapServer/delete
+response time: 0.9472670000000001s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq1.MapServer/delete
+response time: 0.783817s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq2.MapServer/delete
+response time: 0.914077s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq3.MapServer/delete
+response time: 0.7160230000000001s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftq4.MapServer/delete
+response time: 0.895995s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftt0.MapServer/delete
+response time: 0.7936259999999999s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftt1.MapServer/delete
+response time: 0.760717s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftt2.MapServer/delete
+response time: 0.707581s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftt3.MapServer/delete
+response time: 0.738267s
+delete result:{'status': 'success'}
+
+service_url:http://192.168.100.124:6080/arcgis/admin/services/ftt/chinaftt4.MapServer/delete
+response time: 0.7710349999999999s
+delete result:{'status': 'success'}
+
+
+-------------------------task finished!-------------------------
+

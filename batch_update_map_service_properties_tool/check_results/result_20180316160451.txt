@@ -1,0 +1,56 @@
+
+update time：2018-03-16 16:04:51
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_update_map_service_properties_tool/check_results/result_20180316160451.txt
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/batch_update_map_service_properties_tool/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'services_list': [], 'properties': {'minInstancesPerNode': 0, 'maxInstancesPerNode': 1}, 'folder': 'ftt', 'service_name_prefix': 'china'}
+
+-------------------------generating token-------------------------
+
+tokensURnJg4J09LPWCOB-P69gRZDH8CcvVjv3v0Ct0sWAtLT7HNx3sdoPbZ-DnyGf97G
+
+-------------------------getting full service list-------------------------
+
+All the folders:['/', 'f10', 'f20', 'f30', 'ftt']
+services_count:10
+
+
+-------------------------updating service: chinaftq0-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.788775s
+
+-------------------------updating service: chinaftq1-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.8943079999999999s
+
+-------------------------updating service: chinaftq2-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.8939320000000001s
+
+-------------------------updating service: chinaftq3-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 1.019336s
+
+-------------------------updating service: chinaftq4-------------------------
+
+update property:minInstancesPerNode=0
+update property:maxInstancesPerNode=1
+edit result:success
+response time: 0.600953s
+
+-------------------------update finished!-------------------------
+
