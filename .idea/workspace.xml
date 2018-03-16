@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c6ee0c-4dfc-4dac-8e6d-b9b4fa9618f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ags_service_daily_checking_tool/check_results/check_result_20180312174704.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314094951.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314095024.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314095212.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314095251.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314101221.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314101353.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314102731.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314102814.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314104045.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314114535.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314114552.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314114830.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314140148.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180314140325.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ags_service_daily_checking_tool/ags_service_daily_checking_tool.py" afterPath="$PROJECT_DIR$/ags_service_daily_checking_tool/ags_service_daily_checking_tool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_delete_service_tool/ags_pms.conf" afterPath="$PROJECT_DIR$/batch_delete_service_tool/ags_pms.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_delete_service_tool/batch_delete_service_tool.py" afterPath="$PROJECT_DIR$/batch_delete_service_tool/batch_delete_service_tool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_publish_map_service_tool/ags_pms.conf" afterPath="$PROJECT_DIR$/batch_publish_map_service_tool/ags_pms.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_publish_map_service_tool/batch_publish_map_service_tool.py" afterPath="$PROJECT_DIR$/batch_publish_map_service_tool/batch_publish_map_service_tool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/ags_pms.conf" afterPath="$PROJECT_DIR$/batch_update_map_service_properties_tool/ags_pms.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/batch_update_map_service_properties_tool.py" afterPath="$PROJECT_DIR$/batch_update_map_service_properties_tool/batch_update_map_service_properties_tool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common_utils.py" afterPath="$PROJECT_DIR$/common_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py" afterPath="$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py" />
-    </list>
+    <list default="true" id="67c6ee0c-4dfc-4dac-8e6d-b9b4fa9618f8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,34 +132,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="testing_tool_for_ags_map_services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check_results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch_update_map_service_properties_tool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,12 +405,12 @@
     <frame x="1376" y="-218" width="1680" height="958" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20313442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20313442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34411085" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34411085" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
