@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c6ee0c-4dfc-4dac-8e6d-b9b4fa9618f8" name="Default" comment="" />
+    <list default="true" id="67c6ee0c-4dfc-4dac-8e6d-b9b4fa9618f8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_publish_map_service_tool/check_results/result_20180316154712.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_publish_map_service_tool/check_results/result_20180316154918.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180313171520.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180313171858.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180316155837.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180316160451.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180316160732.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/batch_update_map_service_properties_tool/check_results/result_20180316161255.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180316171957.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py" afterPath="$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,42 +26,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testing_tool_for_ags_services.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding>
-                <element signature="e#61#76#0" expanded="true" />
-                <element signature="e#902#1607#0" expanded="false" />
-                <element signature="e#1712#4216#0" expanded="false" />
-                <element signature="e#4308#4355#0" expanded="false" />
-                <element signature="e#4456#5044#0" expanded="false" />
-                <element signature="e#5153#5257#0" expanded="false" />
-                <element signature="e#5328#5552#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="batch_update_map_service_properties_tool.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch_update_map_service_properties_tool/batch_update_map_service_properties_tool.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="104" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="22" selection-end-column="104" />
-              <folding>
-                <element signature="e#68#83#0" expanded="true" />
-                <element signature="e#1992#2692#0" expanded="false" />
-                <element signature="e#2826#4028#0" expanded="false" />
-                <element signature="e#4132#4503#0" expanded="false" />
-                <element signature="e#4604#5151#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,20 +95,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arcgis-server-custom-python-tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testing_tool_for_ags_map_services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,9 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#86#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,20 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch_update_map_service_properties_tool/batch_update_map_service_properties_tool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="104" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="22" selection-end-column="104" />
-          <folding>
-            <element signature="e#68#83#0" expanded="true" />
-            <element signature="e#1992#2692#0" expanded="false" />
-            <element signature="e#2826#4028#0" expanded="false" />
-            <element signature="e#4132#4503#0" expanded="false" />
-            <element signature="e#4604#5151#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing_tool_for_ags_map_services/check_results/result_20180316171720.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-794">
@@ -794,16 +741,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testing_tool_for_ags_map_services/testing_tool_for_ags_services.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#61#76#0" expanded="true" />
-            <element signature="e#902#1607#0" expanded="false" />
-            <element signature="e#1712#4216#0" expanded="false" />
-            <element signature="e#4308#4355#0" expanded="false" />
-            <element signature="e#4456#5044#0" expanded="false" />
-            <element signature="e#5153#5257#0" expanded="false" />
-            <element signature="e#5328#5552#0" expanded="false" />
+            <element signature="e#217#817#0" expanded="false" />
+            <element signature="e#901#1606#0" expanded="false" />
+            <element signature="e#1711#4215#0" expanded="false" />
+            <element signature="e#4307#4354#0" expanded="false" />
+            <element signature="e#4455#5043#0" expanded="false" />
+            <element signature="e#5152#5256#0" expanded="false" />
+            <element signature="e#5327#5551#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch_update_map_service_properties_tool/batch_update_map_service_properties_tool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#68#83#0" expanded="true" />
+            <element signature="e#1992#2692#0" expanded="false" />
+            <element signature="e#2826#4028#0" expanded="false" />
+            <element signature="e#4132#4503#0" expanded="false" />
+            <element signature="e#4604#5151#0" expanded="false" />
           </folding>
         </state>
       </provider>

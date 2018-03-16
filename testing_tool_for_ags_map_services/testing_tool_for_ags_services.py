@@ -26,7 +26,6 @@ def main(argv=None):
     # begin test for request by interval and times
     request_services(export_file, url, token, service_count, full_services_list, interval, times)
 
-
 # initialize parameters
 def initialize_parameters(export_file,server_config):
     file = open(export_file,'a+')
