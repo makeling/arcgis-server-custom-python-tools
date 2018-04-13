@@ -1,0 +1,11 @@
+
+update time：2018-04-03 15:08:05
+
+export_file: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/ags_service_daily_checking_tool/check_results/result_20180403150805.txt
+ags_pms.conf: /Users/maklmac/GitHub/arcgis-server-custom-python-tools/ags_service_daily_checking_tool/ags_pms.conf
+
+conns:{'url': 'http://192.168.100.124:6080/arcgis', 'username': 'siteadmin', 'password': '123456'}
+settins:{'repair_times': 3}
+
+-------------------------generating token-------------------------
+
